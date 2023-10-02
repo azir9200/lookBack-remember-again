@@ -46,7 +46,7 @@ const Header = () => {
               <NavLink to='/productdetails'
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "text-pink-700-600 underline" : ""}>
-                Messages
+                Phone
               </NavLink>
             </li>
           </ul>

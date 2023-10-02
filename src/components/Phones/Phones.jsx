@@ -1,15 +1,15 @@
 import PhoneCard from "../PhoneCard/PhoneCard";
 
 
-const Phones = ({ Phones }) => {
+const Phones = ({ phones }) => {
 
-  console.log(Phones)
+
   return (
     <div className="py-10">
       <h1>All categories Phones</h1>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 " >
         {
-          Phones?.map(phone => <PhoneCard key={phone.id} phone={phone} ></PhoneCard>)
+          phones?.map(phone => <PhoneCard key={phone.id} phone={phone} ></PhoneCard>)
         }
 
       </div>

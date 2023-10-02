@@ -11,11 +11,14 @@ import Root from './Root/Root.jsx';
 import Products from './Pages/Products/Products.jsx';
 import ProductDetails from './Pages/Products/ProductDetails.jsx';
 import Login from './Pages/Login/Login.jsx';
+import Error from './Error/Error.jsx';
+import Phone from './components/Phone/Phone.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -33,6 +36,11 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/phones/',
+        element: <Phone></Phone>,
+        loader: () => fetch('/bottles.json')
       }
     ]
   },
